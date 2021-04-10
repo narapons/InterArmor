@@ -18,6 +18,7 @@ use pocketmine\item\Item;
 use pocketmine\item\ItemIds;
 use pocketmine\inventory\ArmorInventory;
 use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\network\mcpe\protocol\types\inventory\ItemStackWrapper;
 
 class InterArmor extends PluginBase implements Listener {
 
@@ -51,47 +52,47 @@ class InterArmor extends PluginBase implements Listener {
         switch ($item) {
 
             case 1:
-                $this->helmet = Item::get(ItemIds::TURTLE_HELMET);
-                $this->chestplate = Item::get(ItemIds::ELYTRA);
+                $this->helmet = ItemStackWrapper::legacy(Item::get(ItemIds::TURTLE_HELMET));
+                $this->chestplate = ItemStackWrapper::legacy(Item::get(ItemIds::ELYTRA));
                 break;
 
             case 2:
-                $this->helmet = Item::get(ItemIds::LEATHER_HELMET);
-                $this->chestplate = Item::get(ItemIds::LEATHER_CHESTPLATE);
-                $this->leggings = Item::get(ItemIds::LEATHER_LEGGINGS);
-                $this->boots = Item::get(ItemIds::LEATHER_BOOTS);
+                $this->helmet = ItemStackWrapper::legacy(Item::get(ItemIds::LEATHER_HELMET));
+                $this->chestplate = ItemStackWrapper::legacy(Item::get(ItemIds::LEATHER_CHESTPLATE));
+                $this->leggings = ItemStackWrapper::legacy(Item::get(ItemIds::LEATHER_LEGGINGS));
+                $this->boots = ItemStackWrapper::legacy(Item::get(ItemIds::LEATHER_BOOTS));
                 break;
 
             case 3:
-                $this->helmet = Item::get(ItemIds::CHAIN_HELMET);
-                $this->chestplate = Item::get(ItemIds::CHAIN_CHESTPLATE);
-                $this->leggings = Item::get(ItemIds::CHAIN_LEGGINGS);
-                $this->boots = Item::get(ItemIds::CHAIN_BOOTS);
+                $this->helmet = ItemStackWrapper::legacy(Item::get(ItemIds::CHAIN_HELMET));
+                $this->chestplate = ItemStackWrapper::legacy(Item::get(ItemIds::CHAIN_CHESTPLATE));
+                $this->leggings = ItemStackWrapper::legacy(Item::get(ItemIds::CHAIN_LEGGINGS));
+                $this->boots = ItemStackWrapper::legacy(Item::get(ItemIds::CHAIN_BOOTS));
                 break;
 
             case 4:
-                $this->helmet = Item::get(ItemIds::MOB_HEAD);
+                $this->helmet = ItemStackWrapper::legacy(Item::get(ItemIds::MOB_HEAD));
                 break;
 
             case 5:
-                $this->helmet = Item::get(ItemIds::GOLD_HELMET);
-                $this->chestplate = Item::get(ItemIds::GOLD_CHESTPLATE);
-                $this->leggings = Item::get(ItemIds::GOLD_LEGGINGS);
-                $this->boots = Item::get(ItemIds::GOLD_BOOTS);
+                $this->helmet = ItemStackWrapper::legacy(Item::get(ItemIds::GOLD_HELMET));
+                $this->chestplate = ItemStackWrapper::legacy(Item::get(ItemIds::GOLD_CHESTPLATE));
+                $this->leggings = ItemStackWrapper::legacy(Item::get(ItemIds::GOLD_LEGGINGS));
+                $this->boots = ItemStackWrapper::legacy(Item::get(ItemIds::GOLD_BOOTS));
                 break;
 
             case 6:
-                $this->helmet = Item::get(ItemIds::IRON_HELMET);
-                $this->chestplate = Item::get(ItemIds::IRON_CHESTPLATE);
-                $this->leggings = Item::get(ItemIds::IRON_LEGGINGS);
-                $this->boots = Item::get(ItemIds::IRON_BOOTS);
+                $this->helmet = ItemStackWrapper::legacy(Item::get(ItemIds::IRON_HELMET));
+                $this->chestplate = ItemStackWrapper::legacy(Item::get(ItemIds::IRON_CHESTPLATE));
+                $this->leggings = ItemStackWrapper::legacy(Item::get(ItemIds::IRON_LEGGINGS));
+                $this->boots = ItemStackWrapper::legacy(Item::get(ItemIds::IRON_BOOTS));
                 break;
 
             case 7:
-                $this->helmet = Item::get(ItemIds::DIAMOND_HELMET);
-                $this->chestplate = Item::get(ItemIds::DIAMOND_CHESTPLATE);
-                $this->leggings = Item::get(ItemIds::DIAMOND_LEGGINGS);
-                $this->boots = Item::get(ItemIds::DIAMOND_BOOTS);
+                $this->helmet = ItemStackWrapper::legacy(Item::get(ItemIds::DIAMOND_HELMET));
+                $this->chestplate = ItemStackWrapper::legacy(Item::get(ItemIds::DIAMOND_CHESTPLATE));
+                $this->leggings = ItemStackWrapper::legacy(Item::get(ItemIds::DIAMOND_LEGGINGS));
+                $this->boots = ItemStackWrapper::legacy(Item::get(ItemIds::DIAMOND_BOOTS));
                 break;
         }
         $player->getArmorInventory()->setLeggings($this->leggings);
